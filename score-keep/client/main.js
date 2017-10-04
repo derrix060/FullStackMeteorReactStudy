@@ -9,10 +9,10 @@ import {Players} from './../imports/api/players'
 const renderPlayers = (playersList) => {
   return playersList.map((player) => {
     return (
-      <div key={player._id}>
-        <p>{player.name} has {player.score} point(s)</p>
-
-      </div>
+      <p key={player._id}>
+        {player.name} has {player.score} point(s)
+        <button onClick={()=> {Players.remove({'_id': player._id})}}>X</button>
+      </p>
     )
   })
 }
