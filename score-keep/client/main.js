@@ -46,9 +46,10 @@ Meteor.startup(() => {
     let players =  Players.find().fetch()
 
     let title = 'Score Keep'
+    let subtitle = "Created by Mario Apra"
     let jsx = (
       <div>
-        <TitleBar/>
+        <TitleBar title={title} subtitle={subtitle}/>
         <hr/>
 
         {renderPlayers(players)}
